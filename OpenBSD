@@ -1,0 +1,45 @@
+# nastavit pkg path
+export PKG_PATH=http://ftp.spline.de/pub/OpenBSD/snapshots/packages/amd64
+
+cp /etc/X11/xinit/xinitrc /home/jan/.xinitrc
+machdep.allowaperture=1 > /etc/sysctl.conf
+
+# wifi
+ifconfig iwm0 up
+ifconfig iwm0 nwid JBT wpakey .....
+dhclient iwm0
+
+# update -current
+- download bsd.rd from snapshot
+- rename /bsd to /bsd.b
+- move bsd.rd to /
+- reboot
+- boot prompt: boot bsd.rd
+- vybrat Upgrade
+- po upgrade: sysmerge
+- pkg_add -uiv
+
+pkg_add package
+pkg_delete package
+
+# stahnout aktualni ports tree
+cd /tmp
+ftp http://ftp.spline.de/pub/OpenBSD/snapshots/ports.tar.gz
+cd /usr
+tar xzf /tmp/ports.tar.gz
+
+presunout se do slozky programu v /usr/ports
+make install clean
+make uninstall
+make reinstall
+
+# hledat v portech
+cd /usr/ports
+make search key=?.
+
+#FreeRDP
+xfreerdp /u:jan /p:1Napoleon /w:1024 /h:768 /v:45.76.81.211 nebo
+xfreerdp /u:jan /p:1Napoleon /f /v:45.76.81.211
+
+
+
