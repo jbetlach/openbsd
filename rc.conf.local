@@ -1,0 +1,4 @@
+apmd_flags=""
+multicast_host=YES
+pkg_scripts="messagebus"
+
