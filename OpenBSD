@@ -41,5 +41,13 @@ make search key=?.
 xfreerdp /u:jan /p:1Napoleon /w:1024 /h:768 /v:45.76.81.211 nebo
 xfreerdp /u:jan /p:1Napoleon /f /v:45.76.81.211
 
+#FFMPEG
+#screencast
+ffmpeg -f x11grab -s 1920x1080 -i :0.0 out.mkv
+#camera
+ffmpeg -i /dev/video0 out.mkv
+
+
+
 
 
