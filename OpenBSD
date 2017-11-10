@@ -9,6 +9,11 @@ ifconfig iwm0 up
 ifconfig iwm0 nwid JBT wpakey .....
 dhclient iwm0
 
+# mount ext USB drive
+disklabel sd1
+mount /dev/sd1i /mnt
+mount -t ext2fs /dev/sd1i /mnt
+
 # update -current
 - download bsd.rd from snapshot
 - rename /bsd to /bsd.b
