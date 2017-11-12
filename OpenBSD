@@ -27,6 +27,21 @@ mount -t ext2fs /dev/sd1i /mnt
 pkg_add package
 pkg_delete package
 
+# list installed packages
+pkg_info -m
+
+# delete unused dependencies
+pkg_delete -a
+
+# delete all installed packages
+pkg_delete /var/db/pkg/*
+
+# installed packages to file
+pkg_info -m > pkgs.txt
+
+# reinstall previuosly installed packages from file
+pkg_add -l pkgs.txt
+
 # stahnout aktualni ports tree
 cd /tmp
 ftp http://ftp.spline.de/pub/OpenBSD/snapshots/ports.tar.gz
