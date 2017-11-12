@@ -37,7 +37,7 @@ pkg_delete -a
 pkg_delete /var/db/pkg/*
 
 # installed packages to file
-pkg_info -m > pkgs.txt
+pkg_info -mz > pkgs.txt
 
 # reinstall previuosly installed packages from file
 pkg_add -l pkgs.txt
