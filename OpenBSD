@@ -67,6 +67,9 @@ ffmpeg -f x11grab -s 1920x1080 -i :0.0 out.mkv
 #camera
 ffmpeg -i /dev/video0 out.mkv
 
+# empty trash from terminal
+ rm -rf ~/.local/share/Trash/*
+
 
 
 
