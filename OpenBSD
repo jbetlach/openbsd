@@ -42,6 +42,19 @@ pkg_info -mz > pkgs.txt
 # reinstall previuosly installed packages from file
 pkg_add -l pkgs.txt
 
+# updating release
+# updating base
+syspatch
+# updating third party software
+# getting source tree using CVS
+cd /usr
+cvs -qd anoncvs@anoncvs.ca.openbsd.org:/cvs checkout -rOPENBSD_6_3 -P src
+/usr/ports/infrastructure/bin/out-of-date
+make update  #in affected directory
+# updating source tree using CVS
+cd /usr/src
+cvs -q up -Pd -rOPENBSD_6_3
+
 # stahnout aktualni ports tree
 cd /tmp
 ftp http://ftp.spline.de/pub/OpenBSD/snapshots/ports.tar.gz
