@@ -54,6 +54,12 @@ make update  #in affected directory
 # updating source tree using CVS
 cd /usr/src
 cvs -q up -Pd -rOPENBSD_6_3
+# geeting ports tree using CVS
+cd /usr
+cvs -qd anoncvs@anoncvs.ca.openbsd.org:/cvs checkout -rOPENBSD_6_3 -P ports
+# updating ports tree using CVS
+cd /usr/ports
+cvs -q up -Pd -rOPENBSD_6_3
 
 # stahnout aktualni ports tree
 cd /tmp
