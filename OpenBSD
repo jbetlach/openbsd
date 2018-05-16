@@ -14,6 +14,11 @@ disklabel sd1
 mount /dev/sd1i /mnt
 mount -t ext2fs /dev/sd1i /mnt
 
+# moving files between bsd and linux
+tar cf /dev/sdx files or tar cf /dev/rsd2c files
+or
+dd if=tarball.tar of=/dev/sdx
+
 # update -current
 - download bsd.rd from snapshot
 - rename /bsd to /bsd.b
