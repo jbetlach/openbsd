@@ -27,7 +27,7 @@ dd if=tarball.tar of=/dev/sdx
 - boot prompt: boot bsd.rd
 - vybrat Upgrade
 - po upgrade: sysmerge
-- pkg_add -uiv
+- pkg_add -Uuiv
 
 pkg_add package
 pkg_delete package
