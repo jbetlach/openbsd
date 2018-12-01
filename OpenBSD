@@ -93,6 +93,17 @@ ffmpeg -i /dev/video0 out.mkv
 
 # empty trash from terminal
  rm -rf ~/.local/share/Trash/*
+ 
+ # plug in external drive
+ bioctl -c C -l sd2a softraid0
+Passphrase:
+softraid0: CRYPTO volume attached as sd4
+mkdir /mnt/sd3i
+mount /dev/sd3i /mnt/sd3i
+...
+umount /dev/sd3i
+bioctl -d sd3
+
 
 
 
